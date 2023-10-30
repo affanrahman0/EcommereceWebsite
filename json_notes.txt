@@ -1,0 +1,65 @@
+Sure, here's a description of the dependencies listed in the dependencies section of your package.json:
+
+bcryptjs (^2.4.3):
+
+A library for hashing and salting passwords.
+Helps secure user passwords by generating and verifying password hashes.
+Version 2.4.3 or later is used.
+body-parser (^1.20.2):
+
+Middleware for parsing incoming request bodies in Express applications.
+Extracts data from request bodies and makes it available on the req.body object.
+Version 1.20.2 or later is used.
+cookie-parser (^1.4.6):
+
+Middleware for parsing cookies in Express applications.
+Parses HTTP request cookies and makes them accessible on the req.cookies object.
+Version 1.4.6 or later is used.
+dotenv (^16.3.1):
+
+Loads environment variables from a .env file into process.env.
+Helps manage sensitive configuration settings outside of code.
+Version 16.3.1 or later is used.
+express (^4.18.2):
+
+A popular web framework for building web applications and APIs in Node.js.
+Provides routing, middleware support, and simplifies HTTP request handling.
+Version 4.18.2 or later is used.
+jsonwebtoken (^9.0.1):
+
+Library for generating and verifying JSON Web Tokens (JWT) for user authentication.
+JWTs are commonly used for secure transmission of information between parties.
+Version 9.0.1 or later is used.
+mongoose (^7.4.2):
+
+An Object Data Modeling (ODM) library for MongoDB and Node.js.
+Provides an abstraction layer for working with MongoDB collections and documents.
+Version 7.4.2 or later is used.
+nodemailer (^6.9.4):
+
+A module for sending emails from Node.js applications.
+Supports various email providers and offers customizable email templates.
+Version 6.9.4 or later is used.
+nodemon (^3.0.1):
+
+A utility that automatically restarts your Node.js application when files change.
+Useful during development to avoid manual restarts after code changes.
+Version 3.0.1 or later is used.
+validator (^13.11.0):
+
+A library for string validation and sanitization.
+Helps validate and sanitize input data to prevent security vulnerabilities.
+Version 13.11.0 or later is used.
+
+
+
+
+Use req.query when you want to extract data from the query parameters of the URL.
+For example, consider a URL: http://example.com/search?query=apple&type=fruit. In this case, the query parameters are query=apple and type=fruit.
+
+
+Use req.params when you want to extract data from route parameters in the URL.
+For example, consider a route pattern: app.get("/users/:id", (req, res) => { ... });. In this case, :id is a route parameter, and it can capture different user IDs from the URL.
+
+
+Proxy acts as a gateway, forwarding client requests to the target server and receiving responses from the target server, then forwarding those responses back to the client(forwarding requests from frontend to backend)
