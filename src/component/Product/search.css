@@ -1,0 +1,64 @@
+/* width: 100vw;: This sets the width of the element to 100% of the viewport width.
+height: 100vh;: This sets the height of the element to 100% of the viewport height.
+display: flex;: This defines a flex container. It allows you to use flex properties for the layout of the child elements.
+justify-content: center;: This centers the child elements horizontally within the flex container.
+align-items: center;: This centers the child elements vertically within the flex container.
+background-color: aqua;: This sets the background color of the element to aqua.
+position: fixed;: This positions the element relative to the browser window, and it won't scroll with the rest of the page.
+top: 0%;: This positions the element at the top of the viewport.
+left: 0%;: This positions the element at the left side of the viewport. */
+.searchBox{
+    width: 100vw; 
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(189, 235, 235);
+    position: fixed;
+    top: 0%;
+    left: 0%;
+}
+.searchBox > input[type="text"] {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.274);
+    background-color: white;
+    border: none;
+    color: rgba(0, 0, 0, 0.637);
+    padding: 1vmax 2vmax;
+    width: 50%;
+    outline: none;
+    border-radius: 0%;
+    font: 300 1.1vmax cursive;
+    box-sizing: border-box;
+    height: 8%;
+  }
+  
+  .searchBox > input[type="submit"] {
+    height: 8%;
+    border-radius: 0%;
+    background-color: tomato;
+    border: none;
+    padding: 1vmax;
+    width: 10%;
+    font: 300 1.1vmax "Roboto";
+    cursor: pointer;
+    color: white;
+    transition: all 0.5s;
+  }
+  
+  .searchBox > input[type="submit"]:hover {
+    background-color: rgb(137, 21, 8);
+  }
+  
+  @media screen and (max-width: 600px) {
+    .searchBox > input[type="text"] {
+      width: 100%;
+      font: 300 4vw cursive;
+      height: 10%;
+    }
+  
+    .searchBox > input[type="submit"] {
+      height: 10%;
+      width: 30%;
+      font: 300 4vw "Roboto";
+    }
+  }
