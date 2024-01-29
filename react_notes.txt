@@ -1,0 +1,29 @@
+use selector is used to fetch data from the redux state
+
+use state for example -
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const [price, setPrice] = useState([0, 5000]);
+  const [category, setCategory] = useState("");
+  const [rating, setRating] = useState(0);
+
+
+this are use to initialize a variable (like price ) and initialize an function (like setPrice) that will be able to change it's value in response to an event
+
+useEffect  for example -
+
+  useEffect(() => {
+    if(error)
+    {
+      alert.error(error)
+      dispatch(clearErrors())
+    }
+    dispatch(getProduct(keyword, currentPage, price, category, rating));
+  }, [dispatch, keyword, currentPage, price, category, rating,alert,error]);
+
+Like if we change any filter parameter let's say price, then there is a need to make a new api call and to change the values of different state variables. For this we use useEffect , the 2nd parameter of useEffect is an array of dependencies(including price) . If any dependencies changes ( like price through an useeffect function like setPrice). Then the useEffect function is trigered. That inturn calls the getProduct function(through which api function is called to update state variables)
+
+
+ //useRef is used here to create reference of other elements and manipulate them . Like here switcherTab is a reference of button element . This reference is used to add class to the button element. Here onclick event of the above P tags is used to change the position of this button. Adding a class and removing a class is used to changed the position of button element , with the help of css.
+
+
