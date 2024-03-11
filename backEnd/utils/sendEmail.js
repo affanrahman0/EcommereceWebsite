@@ -1,6 +1,6 @@
 const nodeMailer = require("nodemailer")
 
-//we are send the mail using SMTP
+//we will send the mail using SMTP
 
 const sendMail = async (options) =>{
 

@@ -1,6 +1,8 @@
 const express = require("express")
 const app = express();
 const cookie = require("cookie-parser")
+const bodyParser = require("body-parser")
+const fileUpload = require("express-fileupload")
 
 const ErrorMiddleWare = require("./middleware/error")
 
@@ -8,6 +10,8 @@ const ErrorMiddleWare = require("./middleware/error")
 // It's used to parse incoming JSON data from request bodies (usually a POST or PUT request), this middleware will parse that JSON data and make it available in the req.body
 app.use(express.json())
 app.use(cookie())
+app.use(bodyParser.urlencoded({extended : true})) //It extracts form data from the request body and makes it accessible through req.body. The extended option allows for parsing of extended URL-encoded syntax, such as arrays or nested objects within the form data.
+app.use(fileUpload()) //This middleware handles file uploads in multipart/form-data format. It parses incoming requests with file uploads and makes the uploaded files accessible through req.files
 
 
 //route Imports

@@ -21,6 +21,8 @@ useEffect  for example -
     dispatch(getProduct(keyword, currentPage, price, category, rating));
   }, [dispatch, keyword, currentPage, price, category, rating,alert,error]);
 
+useeffect is automatically called if any of its dependencies (like cuurentPage , price) changes during state change.  
+
 Like if we change any filter parameter let's say price, then there is a need to make a new api call and to change the values of different state variables. For this we use useEffect , the 2nd parameter of useEffect is an array of dependencies(including price) . If any dependencies changes ( like price through an useeffect function like setPrice). Then the useEffect function is trigered. That inturn calls the getProduct function(through which api function is called to update state variables)
 
 
